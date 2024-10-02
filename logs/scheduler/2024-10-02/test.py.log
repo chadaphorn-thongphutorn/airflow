@@ -54,3 +54,17 @@
 [2024-10-02T02:04:09.170+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:04:09.170+0000] {dag.py:2742} INFO - Sync 1 DAGs
 [2024-10-02T02:04:09.191+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:04:09.191+0000] {dag.py:3508} INFO - Setting next_dagrun for test to 2024-09-30T08:35:00+00:00, run_after=2024-10-01T08:35:00+00:00
 [2024-10-02T02:04:09.209+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/test.py took 0.368 seconds
+[2024-10-02T02:04:39.493+0000] {processor.py:157} INFO - Started process (PID=442) to work on /opt/airflow/dags/test.py
+[2024-10-02T02:04:39.494+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2024-10-02T02:04:39.494+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:04:39.494+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2024-10-02T02:04:39.770+0000] {processor.py:836} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test.py
+[2024-10-02T02:04:39.792+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:04:39.791+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-10-02T02:04:39.811+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:04:39.811+0000] {dag.py:3508} INFO - Setting next_dagrun for test to 2024-09-30T08:35:00+00:00, run_after=2024-10-01T08:35:00+00:00
+[2024-10-02T02:04:39.827+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/test.py took 0.336 seconds
+[2024-10-02T02:05:10.262+0000] {processor.py:157} INFO - Started process (PID=489) to work on /opt/airflow/dags/test.py
+[2024-10-02T02:05:10.262+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/test.py for tasks to queue
+[2024-10-02T02:05:10.263+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:05:10.263+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/test.py
+[2024-10-02T02:05:10.559+0000] {processor.py:836} INFO - DAG(s) dict_keys(['test']) retrieved from /opt/airflow/dags/test.py
+[2024-10-02T02:05:10.580+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:05:10.579+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-10-02T02:05:10.599+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:05:10.599+0000] {dag.py:3508} INFO - Setting next_dagrun for test to 2024-09-30T08:35:00+00:00, run_after=2024-10-01T08:35:00+00:00
+[2024-10-02T02:05:10.614+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/test.py took 0.355 seconds

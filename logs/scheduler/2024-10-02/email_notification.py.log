@@ -54,3 +54,17 @@
 [2024-10-02T02:04:08.771+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:04:08.771+0000] {dag.py:2742} INFO - Sync 1 DAGs
 [2024-10-02T02:04:08.792+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:04:08.792+0000] {dag.py:3508} INFO - Setting next_dagrun for email_notification to None, run_after=None
 [2024-10-02T02:04:08.810+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/email_notification.py took 0.082 seconds
+[2024-10-02T02:04:39.473+0000] {processor.py:157} INFO - Started process (PID=441) to work on /opt/airflow/dags/email_notification.py
+[2024-10-02T02:04:39.473+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/email_notification.py for tasks to queue
+[2024-10-02T02:04:39.474+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:04:39.474+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/email_notification.py
+[2024-10-02T02:04:39.489+0000] {processor.py:836} INFO - DAG(s) dict_keys(['email_notification']) retrieved from /opt/airflow/dags/email_notification.py
+[2024-10-02T02:04:39.511+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:04:39.511+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-10-02T02:04:39.545+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:04:39.545+0000] {dag.py:3508} INFO - Setting next_dagrun for email_notification to None, run_after=None
+[2024-10-02T02:04:39.594+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/email_notification.py took 0.123 seconds
+[2024-10-02T02:05:10.245+0000] {processor.py:157} INFO - Started process (PID=488) to work on /opt/airflow/dags/email_notification.py
+[2024-10-02T02:05:10.246+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/email_notification.py for tasks to queue
+[2024-10-02T02:05:10.247+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:05:10.246+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/email_notification.py
+[2024-10-02T02:05:10.261+0000] {processor.py:836} INFO - DAG(s) dict_keys(['email_notification']) retrieved from /opt/airflow/dags/email_notification.py
+[2024-10-02T02:05:10.290+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:05:10.290+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-10-02T02:05:10.323+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:05:10.322+0000] {dag.py:3508} INFO - Setting next_dagrun for email_notification to None, run_after=None
+[2024-10-02T02:05:10.348+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/email_notification.py took 0.105 seconds

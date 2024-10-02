@@ -54,3 +54,17 @@
 [2024-10-02T02:04:08.658+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:04:08.658+0000] {dag.py:2742} INFO - Sync 1 DAGs
 [2024-10-02T02:04:08.680+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:04:08.680+0000] {dag.py:3508} INFO - Setting next_dagrun for batch_retry to 2024-10-01T18:00:00+00:00, run_after=2024-10-02T18:00:00+00:00
 [2024-10-02T02:04:08.698+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/batch_retry.py took 0.373 seconds
+[2024-10-02T02:04:39.067+0000] {processor.py:157} INFO - Started process (PID=415) to work on /opt/airflow/dags/batch_retry.py
+[2024-10-02T02:04:39.068+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/batch_retry.py for tasks to queue
+[2024-10-02T02:04:39.068+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:04:39.068+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/batch_retry.py
+[2024-10-02T02:04:39.383+0000] {processor.py:836} INFO - DAG(s) dict_keys(['batch_retry']) retrieved from /opt/airflow/dags/batch_retry.py
+[2024-10-02T02:04:39.408+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:04:39.407+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-10-02T02:04:39.428+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:04:39.428+0000] {dag.py:3508} INFO - Setting next_dagrun for batch_retry to 2024-10-01T18:00:00+00:00, run_after=2024-10-02T18:00:00+00:00
+[2024-10-02T02:04:39.444+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/batch_retry.py took 0.379 seconds
+[2024-10-02T02:05:09.829+0000] {processor.py:157} INFO - Started process (PID=462) to work on /opt/airflow/dags/batch_retry.py
+[2024-10-02T02:05:09.830+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/batch_retry.py for tasks to queue
+[2024-10-02T02:05:09.830+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:05:09.830+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/batch_retry.py
+[2024-10-02T02:05:10.145+0000] {processor.py:836} INFO - DAG(s) dict_keys(['batch_retry']) retrieved from /opt/airflow/dags/batch_retry.py
+[2024-10-02T02:05:10.170+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:05:10.169+0000] {dag.py:2742} INFO - Sync 1 DAGs
+[2024-10-02T02:05:10.195+0000] {logging_mixin.py:150} INFO - [2024-10-02T02:05:10.195+0000] {dag.py:3508} INFO - Setting next_dagrun for batch_retry to 2024-10-01T18:00:00+00:00, run_after=2024-10-02T18:00:00+00:00
+[2024-10-02T02:05:10.216+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/batch_retry.py took 0.390 seconds
