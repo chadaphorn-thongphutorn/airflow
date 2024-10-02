@@ -1,0 +1,16 @@
+[2024-09-26T10:21:35.526+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Batch_api_to_csv_with_dynamic_dates.fetch_paginated_api_data manual__2024-09-26T10:21:34.746252+00:00 [queued]>
+[2024-09-26T10:21:35.533+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Batch_api_to_csv_with_dynamic_dates.fetch_paginated_api_data manual__2024-09-26T10:21:34.746252+00:00 [queued]>
+[2024-09-26T10:21:35.533+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2024-09-26T10:21:35.543+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): fetch_paginated_api_data> on 2024-09-26 10:21:34.746252+00:00
+[2024-09-26T10:21:35.548+0000] {standard_task_runner.py:57} INFO - Started process 9566 to run task
+[2024-09-26T10:21:35.553+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Batch_api_to_csv_with_dynamic_dates', 'fetch_paginated_api_data', 'manual__2024-09-26T10:21:34.746252+00:00', '--job-id', '84', '--raw', '--subdir', 'DAGS_FOLDER/common_authentication_data_pipeline.py', '--cfg-path', '/tmp/tmpfwjbindc']
+[2024-09-26T10:21:35.557+0000] {standard_task_runner.py:85} INFO - Job 84: Subtask fetch_paginated_api_data
+[2024-09-26T10:21:35.609+0000] {task_command.py:410} INFO - Running <TaskInstance: Batch_api_to_csv_with_dynamic_dates.fetch_paginated_api_data manual__2024-09-26T10:21:34.746252+00:00 [running]> on host fb0671c6dbcd
+[2024-09-26T10:21:35.958+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Batch_api_to_csv_with_dynamic_dates' AIRFLOW_CTX_TASK_ID='fetch_paginated_api_data' AIRFLOW_CTX_EXECUTION_DATE='2024-09-26T10:21:34.746252+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-26T10:21:34.746252+00:00'
+[2024-09-26T10:21:35.959+0000] {logging_mixin.py:150} INFO - Start Date: 2024-09-25 01:00:00.000, End Date: 2024-09-26 01:00:00.000
+[2024-09-26T10:21:36.086+0000] {logging_mixin.py:150} INFO - Total records to fetch: 0
+[2024-09-26T10:21:36.086+0000] {logging_mixin.py:150} INFO - Total requests required: 0
+[2024-09-26T10:21:36.086+0000] {python.py:183} INFO - Done. Returned value was: None
+[2024-09-26T10:21:36.093+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=Batch_api_to_csv_with_dynamic_dates, task_id=fetch_paginated_api_data, execution_date=20240926T102134, start_date=20240926T102135, end_date=20240926T102136
+[2024-09-26T10:21:36.115+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2024-09-26T10:21:36.130+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

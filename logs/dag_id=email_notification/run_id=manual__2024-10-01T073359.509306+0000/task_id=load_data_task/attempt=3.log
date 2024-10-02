@@ -1,0 +1,27 @@
+[2024-10-01T07:34:05.650+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: email_notification.load_data_task manual__2024-10-01T07:33:59.509306+00:00 [queued]>
+[2024-10-01T07:34:05.661+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: email_notification.load_data_task manual__2024-10-01T07:33:59.509306+00:00 [queued]>
+[2024-10-01T07:34:05.661+0000] {taskinstance.py:1308} INFO - Starting attempt 3 of 3
+[2024-10-01T07:34:05.676+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): load_data_task> on 2024-10-01 07:33:59.509306+00:00
+[2024-10-01T07:34:05.683+0000] {standard_task_runner.py:57} INFO - Started process 203 to run task
+[2024-10-01T07:34:05.685+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'email_notification', 'load_data_task', 'manual__2024-10-01T07:33:59.509306+00:00', '--job-id', '98', '--raw', '--subdir', 'DAGS_FOLDER/email_notification.py', '--cfg-path', '/tmp/tmpqjj1a_2k']
+[2024-10-01T07:34:05.686+0000] {standard_task_runner.py:85} INFO - Job 98: Subtask load_data_task
+[2024-10-01T07:34:05.736+0000] {task_command.py:410} INFO - Running <TaskInstance: email_notification.load_data_task manual__2024-10-01T07:33:59.509306+00:00 [running]> on host 4658b6cf8d09
+[2024-10-01T07:34:05.830+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='phurinatkantapayao@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='email_notification' AIRFLOW_CTX_TASK_ID='load_data_task' AIRFLOW_CTX_EXECUTION_DATE='2024-10-01T07:33:59.509306+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-01T07:33:59.509306+00:00'
+[2024-10-01T07:34:05.831+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/email_notification.py", line 6, in load_data
+    raise Exception("Python function error")
+Exception: Python function error
+[2024-10-01T07:34:05.843+0000] {taskinstance.py:1350} INFO - Marking task as FAILED. dag_id=email_notification, task_id=load_data_task, execution_date=20241001T073359, start_date=20241001T073405, end_date=20241001T073405
+[2024-10-01T07:34:05.858+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/email.py:153: RemovedInAirflow3Warning: Fetching SMTP credentials from configuration variables will be deprecated in a future release. Please set credentials using a connection instead.
+  send_mime_email(e_from=mail_from, e_to=recipients, mime_msg=msg, conn_id=conn_id, dryrun=dryrun)
+
+[2024-10-01T07:34:05.859+0000] {email.py:269} INFO - Email alerting: attempt 1
+[2024-10-01T07:34:07.311+0000] {email.py:281} INFO - Sent an alert email to ['phurinatkantapayao@gmail.com']
+[2024-10-01T07:34:09.045+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 98 for task load_data_task (Python function error; 203)
+[2024-10-01T07:34:09.073+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2024-10-01T07:34:09.101+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

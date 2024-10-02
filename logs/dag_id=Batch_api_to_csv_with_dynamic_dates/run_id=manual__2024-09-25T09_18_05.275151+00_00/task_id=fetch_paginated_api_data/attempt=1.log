@@ -1,0 +1,22 @@
+[2024-09-25T09:18:05.959+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Batch_api_to_csv_with_dynamic_dates.fetch_paginated_api_data manual__2024-09-25T09:18:05.275151+00:00 [queued]>
+[2024-09-25T09:18:05.965+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Batch_api_to_csv_with_dynamic_dates.fetch_paginated_api_data manual__2024-09-25T09:18:05.275151+00:00 [queued]>
+[2024-09-25T09:18:05.965+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2024-09-25T09:18:05.973+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): fetch_paginated_api_data> on 2024-09-25 09:18:05.275151+00:00
+[2024-09-25T09:18:05.976+0000] {standard_task_runner.py:57} INFO - Started process 931 to run task
+[2024-09-25T09:18:05.979+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Batch_api_to_csv_with_dynamic_dates', 'fetch_paginated_api_data', 'manual__2024-09-25T09:18:05.275151+00:00', '--job-id', '38', '--raw', '--subdir', 'DAGS_FOLDER/common_authentication_data_pipeline.py', '--cfg-path', '/tmp/tmpt2n_1p_m']
+[2024-09-25T09:18:05.985+0000] {standard_task_runner.py:85} INFO - Job 38: Subtask fetch_paginated_api_data
+[2024-09-25T09:18:06.021+0000] {task_command.py:410} INFO - Running <TaskInstance: Batch_api_to_csv_with_dynamic_dates.fetch_paginated_api_data manual__2024-09-25T09:18:05.275151+00:00 [running]> on host fe5dec6acfed
+[2024-09-25T09:18:06.274+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Batch_api_to_csv_with_dynamic_dates' AIRFLOW_CTX_TASK_ID='fetch_paginated_api_data' AIRFLOW_CTX_EXECUTION_DATE='2024-09-25T09:18:05.275151+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-25T09:18:05.275151+00:00'
+[2024-09-25T09:18:06.278+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/common_authentication_data_pipeline.py", line 46, in fetch_data_and_save
+    start_date = end_date - timedelta(days=1)  # 1 day before end_date
+TypeError: unsupported operand type(s) for -: 'str' and 'datetime.timedelta'
+[2024-09-25T09:18:06.294+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=Batch_api_to_csv_with_dynamic_dates, task_id=fetch_paginated_api_data, execution_date=20240925T091805, start_date=20240925T091805, end_date=20240925T091806
+[2024-09-25T09:18:06.309+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 38 for task fetch_paginated_api_data (unsupported operand type(s) for -: 'str' and 'datetime.timedelta'; 931)
+[2024-09-25T09:18:06.328+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2024-09-25T09:18:06.345+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

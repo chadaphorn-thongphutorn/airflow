@@ -1,0 +1,17 @@
+[2024-10-01T10:04:59.788+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: Batch_api_to_csv_with_dynamic_dates.send_notification_task_line manual__2024-10-01T10:04:51+00:00 [queued]>
+[2024-10-01T10:04:59.802+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: Batch_api_to_csv_with_dynamic_dates.send_notification_task_line manual__2024-10-01T10:04:51+00:00 [queued]>
+[2024-10-01T10:04:59.802+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2024-10-01T10:04:59.819+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): send_notification_task_line> on 2024-10-01 10:04:51+00:00
+[2024-10-01T10:04:59.829+0000] {standard_task_runner.py:57} INFO - Started process 107 to run task
+[2024-10-01T10:04:59.832+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'Batch_api_to_csv_with_dynamic_dates', 'send_notification_task_line', 'manual__2024-10-01T10:04:51+00:00', '--job-id', '174', '--raw', '--subdir', 'DAGS_FOLDER/common_authentication_data_pipeline.py', '--cfg-path', '/tmp/tmp7y0znyvj']
+[2024-10-01T10:04:59.834+0000] {standard_task_runner.py:85} INFO - Job 174: Subtask send_notification_task_line
+[2024-10-01T10:04:59.891+0000] {task_command.py:410} INFO - Running <TaskInstance: Batch_api_to_csv_with_dynamic_dates.send_notification_task_line manual__2024-10-01T10:04:51+00:00 [running]> on host 384784ae5431
+[2024-10-01T10:04:59.996+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='phurinatkantapayao@gmail.com' AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='Batch_api_to_csv_with_dynamic_dates' AIRFLOW_CTX_TASK_ID='send_notification_task_line' AIRFLOW_CTX_EXECUTION_DATE='2024-10-01T10:04:51+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-01T10:04:51+00:00'
+[2024-10-01T10:05:00.012+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:313: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(k, replacements))
+
+[2024-10-01T10:05:00.413+0000] {logging_mixin.py:150} INFO - Notification sent successfully to Line
+[2024-10-01T10:05:00.416+0000] {python.py:183} INFO - Done. Returned value was: None
+[2024-10-01T10:05:00.429+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=Batch_api_to_csv_with_dynamic_dates, task_id=send_notification_task_line, execution_date=20241001T100451, start_date=20241001T100459, end_date=20241001T100500
+[2024-10-01T10:05:00.487+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2024-10-01T10:05:00.508+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

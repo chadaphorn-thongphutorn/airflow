@@ -1,0 +1,25 @@
+[2024-10-02T02:02:40.651+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: batch_retry.fetch_paginated_api_data scheduled__2024-09-30T18:00:00+00:00 [queued]>
+[2024-10-02T02:02:40.672+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: batch_retry.fetch_paginated_api_data scheduled__2024-09-30T18:00:00+00:00 [queued]>
+[2024-10-02T02:02:40.673+0000] {taskinstance.py:1308} INFO - Starting attempt 3 of 101
+[2024-10-02T02:02:40.703+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): fetch_paginated_api_data> on 2024-09-30 18:00:00+00:00
+[2024-10-02T02:02:40.713+0000] {standard_task_runner.py:57} INFO - Started process 116 to run task
+[2024-10-02T02:02:40.716+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'batch_retry', 'fetch_paginated_api_data', 'scheduled__2024-09-30T18:00:00+00:00', '--job-id', '191', '--raw', '--subdir', 'DAGS_FOLDER/batch_retry.py', '--cfg-path', '/tmp/tmp3gyg0kp7']
+[2024-10-02T02:02:40.720+0000] {standard_task_runner.py:85} INFO - Job 191: Subtask fetch_paginated_api_data
+[2024-10-02T02:02:40.777+0000] {task_command.py:410} INFO - Running <TaskInstance: batch_retry.fetch_paginated_api_data scheduled__2024-09-30T18:00:00+00:00 [running]> on host 384784ae5431
+[2024-10-02T02:02:41.083+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='batch_retry' AIRFLOW_CTX_TASK_ID='fetch_paginated_api_data' AIRFLOW_CTX_EXECUTION_DATE='2024-09-30T18:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='3' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-09-30T18:00:00+00:00'
+[2024-10-02T02:02:41.085+0000] {logging_mixin.py:150} INFO - Start Date: 2024-10-01 01:00:00.000, End Date: 2024-10-02 01:00:00.000
+[2024-10-02T02:02:41.168+0000] {taskinstance.py:1824} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 181, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 198, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/batch_retry.py", line 69, in fetch_data_and_save
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 401 Client Error: Unauthorized for url: http://34.124.138.144:8000/api/common/authentication
+[2024-10-02T02:02:41.183+0000] {taskinstance.py:1350} INFO - Marking task as UP_FOR_RETRY. dag_id=batch_retry, task_id=fetch_paginated_api_data, execution_date=20240930T180000, start_date=20241002T020240, end_date=20241002T020241
+[2024-10-02T02:02:41.203+0000] {standard_task_runner.py:109} ERROR - Failed to execute job 191 for task fetch_paginated_api_data (401 Client Error: Unauthorized for url: http://34.124.138.144:8000/api/common/authentication; 116)
+[2024-10-02T02:02:41.252+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 1
+[2024-10-02T02:02:41.292+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check

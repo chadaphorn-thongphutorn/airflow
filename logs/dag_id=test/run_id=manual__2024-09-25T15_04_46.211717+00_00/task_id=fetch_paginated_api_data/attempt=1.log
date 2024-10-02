@@ -1,0 +1,20 @@
+[2024-09-25T15:04:47.070+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: test.fetch_paginated_api_data manual__2024-09-25T15:04:46.211717+00:00 [queued]>
+[2024-09-25T15:04:47.075+0000] {taskinstance.py:1103} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: test.fetch_paginated_api_data manual__2024-09-25T15:04:46.211717+00:00 [queued]>
+[2024-09-25T15:04:47.075+0000] {taskinstance.py:1308} INFO - Starting attempt 1 of 4
+[2024-09-25T15:04:47.083+0000] {taskinstance.py:1327} INFO - Executing <Task(PythonOperator): fetch_paginated_api_data> on 2024-09-25 15:04:46.211717+00:00
+[2024-09-25T15:04:47.086+0000] {standard_task_runner.py:57} INFO - Started process 5584 to run task
+[2024-09-25T15:04:47.088+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'test', 'fetch_paginated_api_data', 'manual__2024-09-25T15:04:46.211717+00:00', '--job-id', '61', '--raw', '--subdir', 'DAGS_FOLDER/test.py', '--cfg-path', '/tmp/tmp0vtoa8j3']
+[2024-09-25T15:04:47.090+0000] {standard_task_runner.py:85} INFO - Job 61: Subtask fetch_paginated_api_data
+[2024-09-25T15:04:47.121+0000] {task_command.py:410} INFO - Running <TaskInstance: test.fetch_paginated_api_data manual__2024-09-25T15:04:46.211717+00:00 [running]> on host fb0671c6dbcd
+[2024-09-25T15:04:47.362+0000] {taskinstance.py:1547} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='test' AIRFLOW_CTX_TASK_ID='fetch_paginated_api_data' AIRFLOW_CTX_EXECUTION_DATE='2024-09-25T15:04:46.211717+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-09-25T15:04:46.211717+00:00'
+[2024-09-25T15:04:47.363+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:313: AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+  warnings.warn(_create_deprecation_warning(k, replacements))
+
+[2024-09-25T15:04:47.364+0000] {logging_mixin.py:150} INFO - Start Date: 2024-09-24 01:00:00.000, End Date: 2024-09-25 01:00:00.000
+[2024-09-25T15:04:47.615+0000] {logging_mixin.py:150} INFO - Total records to fetch: 99
+[2024-09-25T15:04:47.616+0000] {logging_mixin.py:150} INFO - Total requests required: 1
+[2024-09-25T15:04:47.858+0000] {logging_mixin.py:150} INFO - Batch 1 saved to /opt/***/output/api_response_paginated.csv
+[2024-09-25T15:04:47.858+0000] {python.py:183} INFO - Done. Returned value was: None
+[2024-09-25T15:04:47.866+0000] {taskinstance.py:1350} INFO - Marking task as SUCCESS. dag_id=test, task_id=fetch_paginated_api_data, execution_date=20240925T150446, start_date=20240925T150447, end_date=20240925T150447
+[2024-09-25T15:04:47.882+0000] {local_task_job_runner.py:225} INFO - Task exited with return code 0
+[2024-09-25T15:04:47.894+0000] {taskinstance.py:2653} INFO - 0 downstream tasks scheduled from follow-on schedule check
